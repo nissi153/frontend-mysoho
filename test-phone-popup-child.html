@@ -2,12 +2,18 @@
 <html>
   <head>
     <script>
+//       function sendDataToParent() {
+//         const data = "Hello from popup!";
+//         if (window.opener && !window.opener.closed) {
+//           window.opener.receiveDataFromPopup(data);
+//         }
+//       }
       function sendDataToParent() {
-        const data = "Hello from popup!";
-        if (window.opener && !window.opener.closed) {
-          window.opener.receiveDataFromPopup(data);
+            const data = "Hello from popup!";
+            if (window.Android) {
+                window.Android.receiveDataFromPopup(data);
+            }
         }
-      }
     </script>
   </head>
   <body>
