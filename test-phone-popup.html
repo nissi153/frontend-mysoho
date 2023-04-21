@@ -12,22 +12,21 @@
         const popupTop = window.innerHeight / 2 - popupHeight / 2;
 
         const popupWindow = window.open(
-          "https://example.com", // 여기에 팝업으로 띄울 웹페이지 주소를 입력하세요.
+          "https://nissi153.github.io/frontend-mysoho/test-phone-popup-child.html", // 여기에 팝업으로 띄울 웹페이지 주소를 입력하세요.
           "popupWindow",
           `width=${popupWidth},height=${popupHeight},left=${popupLeft},top=${popupTop},scrollbars=yes,resizable=yes`
         );
 
-        
         if (popupWindow) {
           popupWindow.focus();
         } else {
           alert("팝업 창을 열지 못했습니다. 팝업 차단을 해제해주세요.");
         }
       }
-      alert("JS alert창입니다.");
     </script>
   </head>
   <body>
+    <h1>Parent 화면</h1>
     <button onclick="openPopup()">팝업 열기</button>
   </body>
 </html>
