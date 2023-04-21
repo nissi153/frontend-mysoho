@@ -9,15 +9,24 @@
 //         }
 //       }
       function sendDataToParent() {
-            const data = "Hello from popup!";
-            if (window.Android) {
-                window.Android.receiveDataFromPopup(data);
-            }
-        }
+          const data = "Hello from popup!";
+          if (window.Android) {
+              window.Android.receiveDataFromPopup(data);
+          }
+      }
+      function onClose() {
+         try {
+           window.close();
+         } catch(e) { console.log(e) }
+        try {
+           self.close();
+         } catch(e) { console.log(e) }
+      }
     </script>
   </head>
   <body>
     <h1>Child 화면</h1>
     <button onclick="sendDataToParent()">Send data to parent window</button>
+    <button onclick="onClose()">Close</button>
   </body>
 </html>
