@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function sendDataToParent() {
+        const data = "Hello from popup!";
+        if (window.opener && !window.opener.closed) {
+          window.opener.receiveDataFromPopup(data);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Child 화면</h1>
+    <button onclick="sendDataToParent()">Send data to parent window</button>
+  </body>
+</html>
