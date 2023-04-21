@@ -17,13 +17,14 @@
           `width=${popupWidth},height=${popupHeight},left=${popupLeft},top=${popupTop},scrollbars=yes,resizable=yes`
         );
 
-        alert("JS alert창입니다.");
+        
         if (popupWindow) {
           popupWindow.focus();
         } else {
           alert("팝업 창을 열지 못했습니다. 팝업 차단을 해제해주세요.");
         }
       }
+      alert("JS alert창입니다.");
     </script>
   </head>
   <body>
